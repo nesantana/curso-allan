@@ -1,0 +1,13 @@
+header {
+  background: #D23575;
+  color: #FFF;
+  padding: 10px 0;
+}
+
+.menu span {
+  display: block;
+  width: 35px;
+  height: 6px;
+  background: #FFF;
+  margin: 3px auto
+}

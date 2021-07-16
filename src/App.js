@@ -1,23 +1,51 @@
-import logo from './logo.svg';
+import Header from './component/Header/index'
+import Card from './component/Card';
+
 import './App.css';
 
 function App() {
+  const dados = [
+    {
+      name: 'Allan Matheus',
+      function: 'Developer Jr.',
+      level: 'Junior',
+      url: 'http://google.com'
+    },
+    {
+      name: 'Mateus Santana',
+      function: 'Developer Sr.',
+      level: 'Senior',
+      url: 'http://google.com'
+    },
+    {
+      name: 'Thais Cristine',
+      function: 'Tester',
+      level: 'Junior',
+      url: 'http://google.com'
+    },
+    {
+      name: 'Suzane Barbosa',
+      function: 'UX/UI Design',
+      level: 'Junior',
+      url: 'http://google.com'
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <div className="container flex">
+        {
+          dados.map(item => {
+            return (
+              <div className="col">
+                <Card user={item}/>
+              </div>
+            )
+          })
+        }
+      </div>
     </div>
   );
 }
